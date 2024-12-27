@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إنشاء حساب جديد</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>إنشاء حساب جديد</h2>
+    <form id="signupForm">
+      <input type="text" id="phoneNumberSignup" placeholder="رقم الهاتف" required>
+      <input type="password" id="passwordSignup" placeholder="كلمة السر" required>
+      <input type="password" id="confirmPassword" placeholder="تأكيد كلمة السر" required>
+      <button type="submit">إنشاء حساب</button>
+    </form>
+
+    <!-- رسالة التحقق -->
+    <div id="confirmationMessage" style="display:none;">
+      <p>تم إنشاء حسابك بنجاح! سيتم تحويلك إلى صفحة تسجيل الدخول...</p>
+    </div>
+    
+    <div id="errorMessage" style="display:none;">
+      <p>هناك خطأ في عملية التحقق. يرجى المحاولة مرة أخرى.</p>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+  <script src="firebase.js"></script>
+</body>
+</html>
